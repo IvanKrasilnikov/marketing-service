@@ -1,0 +1,44 @@
+.block-8 {
+  @include container;
+  @include padding(30px null 35px);
+
+  > .l-wrapper {
+    @include container;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    @include span(6 of 12);
+
+    &:last-child {
+      @include last;
+    }
+  }
+
+  &__title {
+    @include margin(null null 30px);
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    @include position(relative);
+    list-style-type: none;
+  }
+
+  &__item-icon {
+    @include position(absolute, 0 null null 0);
+    @include size(25px);
+    fill: $c-theme-4;
+  }
+
+  &__item-text {
+    @include font(null 25px);
+    @include padding(null null null 30px);
+  }
+}

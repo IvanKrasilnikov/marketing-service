@@ -1,0 +1,79 @@
+.modal-contacts {
+  @include padding(20px);
+  @include size(600px null);
+  text-align: center;
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__names {
+    @include span(3 of 12);
+    text-align: left;
+  }
+
+  &__name {
+    @include font($h5-fontsize 30px);
+    @include margin(null null 5px null);
+  }
+
+  &__inputs {
+    @include span(9 of 12 last);
+
+    input {
+      box-sizing: border-box !important;
+      font-family: $global-font-family !important;
+      height: 30px !important;
+      line-height: 20px !important;
+      margin-bottom: 5px !important;
+      padding-bottom: 5px !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+      padding-top: 5px !important;
+    }
+
+    textarea {
+      font-family: $global-font-family !important;
+      height: 70px !important;
+      line-height: 20px !important;
+      max-height: 70px !important;
+      min-height: 70px !important;
+      padding-bottom: 5px !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+      padding-top: 5px !important;
+    }
+  }
+
+  &__col {
+    @include span(4 of 12);
+
+    &_one {
+      @include full;
+    }
+
+    &:nth-child(3) {
+      @include last;
+    }
+  }
+
+  &__phone {
+    @include font($h5-fontsize 30px);
+    @include margin(null null 20px null);
+  }
+
+  &__button {
+    @include font($h5-fontsize);
+    @include margin(20px null);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    font-family: $global-font-family;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%);
+      box-shadow: none;
+    }
+  }
+}

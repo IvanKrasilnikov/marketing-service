@@ -1,0 +1,22 @@
+.to-home {
+  @include position(fixed, 0 0 null null);
+  @include padding(12px 10px 10px);
+  display: none;
+  height: 100%;
+  width: 55px;
+  z-index: 4;
+  @include breakpoint(0 1290px) {
+    display: none !important;
+  }
+
+  &__button {
+    @include position(absolute, null 10px 12px null);
+    @include size(34px);
+    cursor: pointer;
+  }
+
+  &__icon {
+    @include size(34px);
+    fill: $c-theme-2;
+  }
+}

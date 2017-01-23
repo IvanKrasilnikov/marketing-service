@@ -1,0 +1,13 @@
+// --- *** SASS PROJECT COMPONENTS *** -----------------------------------------
+
+// Import global variables for all project
+@import '../variables';
+
+// @import 'utils/'
+@import '../utils/**/_*.scss';
+
+// --- *** IMPORT ALL VENDORS STYLE *** ----------------------------------------
+
+// @import 'bootstrap-grid/bootstrap-grid';
+// @import 'materialize/materialize';
+ @import 'semantic-ui/**/_*.scss';

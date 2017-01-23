@@ -1,0 +1,64 @@
+.block-3 {
+  @include padding(30px null);
+  background-color: $c-theme-1;
+  color: $c-theme-3;
+  text-align: center;
+
+  &__title,
+  &__subtitle {
+    color: $c-theme-3;
+  }
+
+  &__list {
+    @include container;
+    @include margin(30px null 20px);
+  }
+
+  &__item {
+    @include span(3 of 15);
+    @include position(relative);
+    @include size(null 143px);
+
+    &_pl {
+      @include size(null 121px);
+    }
+
+    &:last-child {
+      @include last;
+    }
+  }
+
+  &__item-icon {
+    @include size(50px);
+    fill: $c-theme-2;
+  }
+
+  &__item-arrow {
+    @include span(1 of 15);
+  }
+
+  &__item-icon-arrow {
+    @include margin(90px null null);
+    @include size(30px);
+    fill: $c-theme-2;
+
+    &_pl {
+      @include margin(75px null null);
+    }
+  }
+
+  &__button {
+    @include font($h4-fontsize null normal);
+    @include margin(10px null null);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    color: $c-theme-3;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%);
+      box-shadow: none;
+    }
+  }
+}

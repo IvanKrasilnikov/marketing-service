@@ -1,0 +1,48 @@
+.block-6 {
+  @include container;
+  @include padding(30px null);
+
+  > .l-wrapper {
+    @include container;
+  }
+
+  &__icon-wrapper {
+    @include span(6 of 12 0);
+    @include size(null 265px);
+    text-align: center;
+  }
+
+  &__icon {
+    @include vertical-align;
+    @include size(200px);
+    display: inline-block;
+  }
+
+  &__content {
+    @include span(6 of 12 0 last);
+  }
+
+  &__title {
+    @include margin(null null 30px);
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    @include position(relative);
+    list-style-type: none;
+  }
+
+  &__item-icon {
+    @include position(absolute, 0 null null 0);
+    @include size(25px);
+    fill: $c-theme-4;
+  }
+
+  &__item-text {
+    @include font(null 25px);
+    @include padding(null null null 30px);
+  }
+}

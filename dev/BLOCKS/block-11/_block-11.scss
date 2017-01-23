@@ -1,0 +1,126 @@
+.block-11 {
+  @include padding(30px null);
+  background-color: $c-theme-3;
+  text-align: center;
+
+  &__title {
+    @include margin(null null 30px);
+  }
+
+  &__list {
+    @include container;
+  }
+
+  &__item {
+    @include span(4 of 12);
+    @include margin(null null 30px);
+    background-color: white;
+    border-radius: 2px;
+    list-style-type: none;
+
+    &:nth-child(3n) {
+      @include last;
+    }
+
+    &:nth-child(n + 3) {
+      & .block-11__second {
+        @include size(373px 188px);
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    & .block-11__first_de {
+      @include size(null 249px);
+    }
+  }
+
+  &__first {
+    @include padding(20px 20px 30px 20px);
+    background-color: $c-theme-1;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    color: white;
+  }
+
+  &__name {
+    @include font($h2-fontsize null 300);
+    color: $c-theme-2;
+  }
+
+  &__cost {
+    @include margin(null null 5px);
+  }
+
+  &__cost-num {
+    @include font(2.5rem);
+  }
+
+  &__cost-unit {
+    @include font($h2-fontsize);
+  }
+
+  &__for {
+    @include font($h4-fontsize);
+    @include size(334px 56px);
+    display: table-cell;
+    color: $c-theme-3;
+    vertical-align: middle;
+
+    &_de {
+      @include size(null 84px);
+    }
+  }
+
+  &__second {
+    @include padding(20px);
+  }
+
+  &__about {
+    @include font($h4-fontsize);
+    @include size(334px 84px);
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__pluses {
+    @include margin(10px null null);
+    @include size(null 160px);
+  }
+
+  &__plus {
+    @include margin(null null 5px);
+    @include position(relative);
+    text-align: left;
+  }
+
+  &__plus-icon {
+    @include position(absolute, 0 null null 0);
+    @include size(25px);
+    fill: $c-theme-5;
+  }
+
+  &__plus-text {
+    @include font(null 25px);
+    @include padding(null null null 35px);
+  }
+
+  &__button {
+    @include font($h4-fontsize null normal);
+    @include margin(10px null null);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    color: $c-theme-3;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%);
+      box-shadow: none;
+    }
+  }
+
+  &__aftertext {
+    text-align: center;
+  }
+}

@@ -1,0 +1,5 @@
+// Function for use with Breakpoint sass
+// Subtract 1px in pair of values
+@function mq-range($range-pair) {
+  @return nth($range-pair, 1) (nth($range-pair, 2) - 1px);
+}

@@ -1,0 +1,21 @@
+@mixin vanishing-text($color: white, $color-stop: 75%) {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent $color-stop,
+      $color 100%
+    );
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

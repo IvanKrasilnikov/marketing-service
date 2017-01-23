@@ -1,0 +1,29 @@
+.block-9 {
+  @include padding(50px null);
+  background-image: url('../img/block-9/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+
+  &__title {
+    color: white;
+  }
+
+  &__item {
+    @include position(relative);
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  &__item-icon {
+    @include position(absolute, 0 null null 0);
+    @include size(30px);
+    fill: $c-theme-4;
+  }
+
+  &__item-text {
+    @include font($h4-fontsize 30px);
+    @include padding(null null null 30px);
+  }
+}

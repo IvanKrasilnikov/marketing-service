@@ -1,0 +1,156 @@
+// --- *** COMPONENTS FROM BOWER *** -------------------------------------------
+// FROM BOWER ADD ONLY USE IN DEV PROJECT PACKAGES
+@import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../bower_components/susy/sass/susy';
+// -----------------------------------------------------------------------------
+
+// --- SUSY SETTINGS -----------------------------------------------------------
+$color-susy-debug-grid: #66f;
+$susy: (
+  // Направление отображения
+  flow: ltr,//ltr opt:ltr|rtl
+  // span внутри container, но не содержимого span.
+
+  // Тип сетки
+  math: fluid,//fluid opt:fluid|static
+  // Гибкие(в %) или статические(ширина указывается явно в column-width).
+
+  // Тип отображения
+  output: float,//float opt:float|isolate
+  // isolate - добавляет margin на случай, если колонка абсолютно
+  //позиционирована (не стоит применять глобально).
+
+  // Положение gutter
+  gutter-position: after,//after opt:before|after|split|inside|inside-static
+  // gutters создаются через margin к колонкам перед(before), после(after),
+  //с обеих сторон по половине(split), как padding с обеих сторон
+  //по половине(inside), статический padding с обеих сторон(inside-static
+  //применять только для статических значений колонок).
+
+  // Ширина container
+  container: auto,//auto opt: любые допустимые значения ширины
+  // При auto равна 100%
+
+  // Позиция container
+  container-position: center,//center opt:left|center|right|<length>[*2]
+  // Позиционируется через margin. При указании одного статического
+  //значения - добавляет с двух сторон одинаковые указанные margin, двух -
+  //левый и правый соответственно.
+
+  // Количество колонок.
+  columns: 12,//4 opt: число|список(list) - (1 2 3 2 1)
+  // Список - для работы с асиметричными сетками (не стоит применять глобально).
+
+  // Ширина gutter.
+  gutters: 0.25,//1/4 opt: 0.25, 20px/80px...
+  // Нельзя задавать фиксированные значения, только отношение к ширине колонки.
+
+  // Ширина колонки
+  column-width: false,//false opt:false/null|любые допустимые значения ширины
+  // false/null - для автоматического расчёта в гибких сетках. Явное значение
+  //работает в гибких и в статических сетках.
+
+  // Значение свойства box-sizing
+  global-box-sizing: content-box,//content-box opt:border-box|content-box
+  // Не работает, лучше указать непосредственно в свойстве через селектор *.
+
+  // Направление последнего элемента
+  last-flow: to,//to opt:from|to
+  // Значение свойства float у последнего элемента в ряду.
+
+  debug: (
+    // Сетка для дебага
+    image: hide,//hide opt:show|hide|show-columns|show-baseline
+    // Показывает базовую линию при использовании переменной $base-line-height
+    //из Compass Vertical Rhythm
+
+    // Цвет сетки
+    color: rgba($color-susy-debug-grid, 0.25),//rgba(#66f, 0.25)
+
+    // Кнопка сетки для дебага
+    output: background,//background opt:background|overlay
+    // overlay - показывать кнопку
+
+    // Позиция кнопки для дебага
+    toggle: top right,//top right
+  ),
+
+  // Использование внешних модулей в работе Susy
+  use-custom: (
+    background-image: true,//true
+    background-options: false,//false
+
+    // Лучше использовать универсальный селектор.
+    box-sizing: false,//true
+
+    // Берёт из Bourbon
+    clearfix: true,//false
+
+    // Берёт из Compass значения $rhythm-unit и $rem-with-px-fallback
+    rem: false,
+  )
+);
+// -----------------------------------------------------------------------------
+
+// --- *** SASS PROJECT COMPONENTS *** -----------------------------------------
+
+// Import global variables for all project
+@import 'variables';
+
+// @import base|reset|normalize|typography
+@import 'base/**/_*.scss';
+
+// @import 'utils/'
+@import 'utils/**/_*.scss';
+
+// EXPEPTION FOR USES FRAMEWORK VARIABLES
+@import 'vendors/materialize/materialize';
+
+// Import classes that are not blocks in BEM
+// USE 'l-' PREFIX
+// @import 'layout/'
+@import 'layout/**/_*.scss';
+
+// @import '../BLOCKS/'
+@import '../BLOCKS/**/_*.scss';
+
+// -----------------------------------------------------------------------------
+
+// --- *** RUCKSACK ALIASES (IF NEED) *** ------------------------------------------------
+@alias {
+  bg: background;
+}
+// -----------------------------------------------------------------------------
+
+// Example
+//
+// .class {
+//   @include clearfix;
+//   // font-size line-height font-weight
+//   @include font(14px 1.5 300);
+//   // top and bottom margin to 0
+//   @include h-reset;
+//   // top and bottom margin to null, left padding to 0
+//   @include list-reset;
+//   @include margin(5px null 10px 15px);
+//   @include padding(10px 15px);
+//   // position, top right bottom left
+//   @include position(relative, 5px null null 0);
+//   // width height max-width max-height min-width min-height
+//   @include size(null 100%);
+//   // '...' for line
+//   @include text-overflow;
+//   // width height, color bg-color, direction
+//   @include triangle(10px 5px, black, up-right);
+//   // linear-gradient with :before element - color, color-stop
+//   @include vanishing-text(white);
+//   // with transform
+//   @include vertical-align;
+//
+//   // postcss-assets
+//   background-image: resolve('img-1.jpg');
+//   // media-queries mq-range - ($lg - 1px)
+//   @include breakpoint(mq-range($md $lg)) {
+//     color: red;
+//   }
+// }

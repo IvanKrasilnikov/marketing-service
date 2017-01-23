@@ -1,0 +1,40 @@
+.block-1 {
+  @include padding(100px null);
+  background-image: url('../img/block-1/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+
+  &__title {
+    @include font($h2-fontsize null normal);
+    @include margin(0 null);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include font($h1-fontsize null normal);
+  }
+
+  &__subtitle {
+    @include font(null null 300);
+    color: white;
+  }
+
+  &__button {
+    @include font($h4-fontsize null normal);
+    @include margin(10px null null);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    color: $c-theme-3;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%);
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.header {
+  @include clearfix;
+  @include position(fixed, 0 null null 0);
+  @include size(100% 70px);
+  background-color: $c-theme-3;
+  z-index: 2;
+
+  &__logo-link {
+    @include margin(10px null);
+    @include size(null 50px);
+    display: block;
+    float: right;
+  }
+
+  &__logo {
+    @include size(182px 50px);
+  }
+
+  &__menu-link {
+    @include margin(19px null);
+    @include size(null 32px);
+    display: block;
+    float: left;
+  }
+
+  &__menu {
+    @include size(32px);
+    fill: $c-theme-5;
+    transition: fill 0.4s;
+
+    &:hover {
+      fill: $c-theme-4;
+    }
+  }
+}

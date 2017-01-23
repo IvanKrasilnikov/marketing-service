@@ -1,0 +1,20 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+
+  "env": {
+    "browser": true,     // browser global variables.
+    "node": true,        // Node.js global variables and Node.js-specific rules.
+    "jquery": true,      // jquery global variables.
+    "es6": true
+  },
+
+  "rules": {
+    "strict": 0      // controls location of Use Strict Directives
+  }
+}

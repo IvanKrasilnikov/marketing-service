@@ -1,0 +1,41 @@
+// --- *** VARIABLES FOR ALL PROJECT *** ---------------------------------------
+
+// --- BASE VARIABLES ----------------------------------------------------------
+$global-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+// min width in stats http://gs.statcounter.com/#desktop+mobile+tablet-resolution-RU-monthly-201606-201611-bar
+// $window-min-width: 320px;
+
+// -----------------------------------------------------------------------------
+
+// --- MEDIA SIZE STACK --------------------------------------------------------
+// Based on
+// http://gs.statcounter.com/#desktop+mobile+tablet-resolution-RU-monthly-201606-201611-bar
+// and http://css-live.ru/articles-css/pravilnye-kontrolnye-tochki-v-css.html
+// $xlg: 1900px; $xlg-container: 1880px; // if need
+$lg: 1200px; $lg-container: 1180px;
+// $md: 800px; $md-container: 780px;
+// $sm: 500px; $sm-container: 480px;
+
+// $mq-phones: max-width ($sm - 1px);
+// $mq-tablet-portrait: $sm ($md - 1px);
+// $mq-tablet-landscape: $md ($lg - 1px);
+// $mq-desktop: $lg ($xlg - 1px);
+// $mq-big-desktop: min-width $xlg;
+
+// - If use Bootstrap grids -
+// $lg: 1199px; $lg-container: 1170px;
+// $md: 991px; $md-container: 970px;
+// $sm: 767px; $sm-container: 750px;
+// -----------------------------------------------------------------------------
+
+// --- COLOR STACK -------------------------------------------------------------
+$c-base-black: #2e2e2e;
+$c-base-white: white;
+
+$c-theme-1: #2c3e50;
+$c-theme-2: #e74c3c;
+$c-theme-3: #ecf0f1;
+$c-theme-4: #3498db;
+$c-theme-5: #2980b9;
+
+// -----------------------------------------------------------------------------

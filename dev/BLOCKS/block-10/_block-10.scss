@@ -1,0 +1,18 @@
+.block-10 {
+  @include padding(30px null);
+  text-align: center;
+
+  td {
+    @include padding(null 30px);
+    @include size(33.333% null);
+  }
+
+  &__invest {
+    @include font($h1-fontsize);
+    color: $c-theme-2;
+  }
+
+  &__aftertext {
+    @include margin(30px null null);
+  }
+}

@@ -1,0 +1,48 @@
+.side-nav {
+  @include size(400px null);
+
+  .userView {
+    text-align: center;
+  }
+
+  &__bg {
+    background-color: $c-theme-3;
+  }
+
+  &__logo {
+    @include margin(null null 14px);
+    @include size(236px 70px);
+  }
+
+  &__link {
+    @include position(relative);
+    padding-right: 10px !important;
+  }
+
+  &__icon {
+    @include padding(10px);
+    @include position(absolute, 0 null null 10px);
+    @include size(48px);
+    fill: $c-theme-5;
+  }
+
+  &__name {
+    @include font(null 48px 300);
+    @include padding(null null null 30px);
+  }
+
+  &__button {
+    @include margin(10px null null);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    color: $c-theme-3;
+    font-weight: 300 !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%) !important;
+      box-shadow: none;
+    }
+  }
+}

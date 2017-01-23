@@ -1,0 +1,9 @@
+*.git
+Thumbs.db
+*.[oa]
+*~
+*.zip
+*.rar
+add_materials/
+bower_components/
+node_modules/

@@ -1,0 +1,16 @@
+// --- CONTAINER FOR USE WITH SUSY ---------------------------------------------
+.l-wrapper {
+  @include margin(null auto);// centered
+  @include padding(null 10px);
+  @include size($lg-container null);
+
+  // @include breakpoint(mq-range($md $lg)) {
+  //   @include size($md-container null);
+  // }
+  // @include breakpoint(mq-range($sm $md)) {
+  //   @include size($sm-container null);
+  // }
+  // @include breakpoint(mq-range(0 $sm)) {
+  //   @include size(100% null);
+  // }
+}

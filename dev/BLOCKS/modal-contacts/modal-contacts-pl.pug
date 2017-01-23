@@ -1,0 +1,21 @@
++b.modal-contacts.modal#modal-contacts
+  form.ui.form
+    +e.wrapper
+      +e.names
+        +e.name Imię i nazwisko
+        +e.name Firma
+        +e.name Telefon
+        +e.name Email
+        +e.name Treść wiadomości
+      +e.inputs
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        textarea
+    +e(type='submit').BUTTON.button.btn.waves-effect.waves-light WYSŁAĆ
+
+  +e.wrapper
+    +e.col_one
+      +e.city Polska
+      +e(href='tel:+48506265686').phone +48 (506) 26-56-86

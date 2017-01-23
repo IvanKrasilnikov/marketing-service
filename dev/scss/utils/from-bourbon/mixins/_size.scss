@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/// Sets the `width` and `height` of the element.
+///
+/// @param {List} $size
+///   A list of at most 6 size values - width, height, max-width, max-height,
+///  min-width, min-height.
+///
+///   If there is only a single value in `$size` it is used for both width and height. All units are supported.
+///
+/// @example scss - Usage
+///   .first-element {
+///     @include size(2em);
+///   }
+///
+///   .second-element {
+///     @include size(auto 10em);
+///   }
+///
+///   .third-element {
+///     @include size(auto 10em 100% null null 50px);
+///   }
+///
+/// @example css - CSS Output
+///   .first-element {
+///     width: 2em;
+///     height: 2em;
+///   }
+///
+///   .second-element {
+///     width: auto;
+///     height: 10em;
+///   }
+///
+///   .third-element {
+///     width: auto;
+///     height: 10em;
+///     max-width: 100%;
+///     min-height: 50px;
+///   }
+///
+/// @todo Refactor in 5.0.0 to use a comma-separated argument
+
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  }
+
+  @if is-size($width) {
+    width: $width;
+  }
+
+  @if length($value) > 2 {
+    $max-width: nth($value, 3);
+
+    @if is-size($max-width) {
+      max-width: $max-width;
+    }
+
+    @if length($value) > 3 {
+      $max-height: nth($value, 4);
+
+      @if is-size($max-height) {
+        max-height: $max-height;
+      }
+
+      @if length($value) > 4 {
+        $min-width: nth($value, 5);
+
+        @if is-size($min-width) {
+          min-width: $min-width;
+        }
+
+        @if length($value) > 5 {
+          $min-height: nth($value, 6);
+
+          @if is-size($min-height) {
+            min-height: $min-height;
+          }
+        }
+      }
+    }
+  }
+}

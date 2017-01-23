@@ -1,0 +1,51 @@
+.block-14 {
+  @include padding(30px null);
+  text-align: center;
+
+  &__wrapper {
+    @include container;
+    @include margin(null null 10px);
+  }
+
+  &__tool {
+    @include span(6 of 12);
+  }
+
+  &__text {
+    @include font(null null 300);
+  }
+
+  &__icon-wrapper {
+    @include size(400px 268px);
+    background-image: url('../img/block-14/display.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 20px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  &__icon {
+    @include margin(40px null 100px);
+    @include size(128px);
+    fill: $c-theme-5;
+  }
+
+  &__gear {
+    @include span(6 of 12 last);
+  }
+
+  &__button {
+    @include font($h4-fontsize null normal);
+    background-color: $c-theme-2;
+    box-shadow: none;
+    color: $c-theme-3;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($c-theme-2, 5%);
+      box-shadow: none;
+    }
+  }
+}

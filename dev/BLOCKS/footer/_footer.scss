@@ -1,0 +1,56 @@
+.footer {
+  color: $c-theme-3;
+
+  &__up {
+    @include padding(20px null 40px);
+    background-color: $c-theme-4;
+  }
+
+  &__contacts {
+    @include container;
+  }
+
+  &__title,
+  &__contact-title {
+    color: $c-theme-3;
+  }
+
+  &__contact {
+    @include span(3 of 12);
+  }
+
+  &__logo-column {
+    @include span(3 of 12 last);
+    text-align: center;
+  }
+
+  &__mail,
+  &__phone {
+    @include font($h4-fontsize 1.5);
+    color: $c-theme-3;
+    display: inline-block;
+  }
+
+  &__mail {
+    text-decoration: underline;
+  }
+
+  &__phone {
+    @include font(null null normal);
+  }
+
+  &__logo-link {
+    @include size(200px 150px);
+    display: inline-block;
+  }
+
+  &__logo {
+    @include size(200px 150px);
+  }
+
+  &__bottom {
+    @include font($h6-fontsize 3);
+    background-color: $c-theme-5;
+    text-align: center;
+  }
+}

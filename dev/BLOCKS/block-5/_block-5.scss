@@ -1,0 +1,49 @@
+.block-5 {
+  @include container;
+  @include position(relative);
+  background-color: $c-theme-3;
+
+  &__img-bg {
+    @include position(absolute, 0 0 null null);
+    @include size(50% 100%);
+    background-image: url('../img/block-5/bg.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  > .l-wrapper {
+    @include container;
+    @include padding(30px null);
+    @include position(relative);
+    background-image:
+    linear-gradient(to right, $c-theme-3 0%, $c-theme-3 50%, transparent 100%);
+  }
+
+  &__content {
+    @include span(6 of 12 0);
+  }
+
+  &__title {
+    @include margin(null null 30px);
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    @include position(relative);
+    list-style-type: none;
+  }
+
+  &__item-icon {
+    @include position(absolute, 0 null null 0);
+    @include size(25px);
+    fill: $c-theme-4;
+  }
+
+  &__item-text {
+    @include font(null 25px);
+    @include padding(null null null 30px);
+  }
+}

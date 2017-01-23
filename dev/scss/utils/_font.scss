@@ -1,0 +1,32 @@
+/// Provides a quick method for write font styles. Use a `null` value to “skip”.
+///
+/// @param {Arglist} $vals
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element {
+///     @include font(12px 2 bold);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     font-size: 12px;
+///     line-height: 2;
+///     font-weight: bold;
+///   }
+///
+
+@mixin font($vals) {
+  $fs: nth($vals, 1);
+  font-size: $fs;
+
+  @if (length($vals) > 1) {
+    $flh: nth($vals, 2);
+    line-height: $flh;
+  }
+
+  @if (length($vals) > 2) {
+    $fw: nth($vals, 3);
+    font-weight: $fw;
+  }
+}

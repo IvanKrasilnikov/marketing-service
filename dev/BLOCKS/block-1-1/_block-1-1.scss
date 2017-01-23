@@ -1,0 +1,47 @@
+.block-1-1 {
+  @include padding(30px null);
+  text-align: center;
+
+  &__wrapper {
+    @include container;
+    @include margin(30px null);
+  }
+
+  &__small {
+    @include span(6 of 12);
+  }
+
+  &__text,
+  &__subtext {
+    @include font(null null 300);
+  }
+
+  &__icon-wrapper {
+    @include margin(20px null);
+    @include size(150px);
+    background-color: $c-theme-5;
+    // border: 10px solid $c-theme-1;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &__icon {
+    @include margin(30px null);
+    @include size(90px);
+    fill: white;
+    text-align: center;
+
+    &_en {
+      @include padding(2px 2px 7px 7px);
+    }
+
+    &_small {
+      @include margin(35px null);
+      @include size(80px);
+    }
+  }
+
+  &__big {
+    @include span(6 of 12 last);
+  }
+}

@@ -1,0 +1,27 @@
++b.modal-contacts.modal#modal-contacts
+  form.ui.form
+    +e.wrapper
+      +e.names
+        +e.name Имя
+        +e.name Компания
+        +e.name Телефон
+        +e.name Email
+        +e.name Сообщение
+      +e.inputs
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        textarea
+    +e(type='submit').BUTTON.button.btn.waves-effect.waves-light Отправить
+
+  +e.wrapper
+    +e.col
+      +e.city Россия
+      +e(href='tel:+79250146616').phone +7 (925) 014-66-16
+    +e.col
+      +e.city Беларусь
+      +e(href='tel:+375445237777').phone +375 (44) 523-77-77
+    +e.col
+      +e.city Польша
+      +e(href='tel:+48506265686').phone +48 (506) 26-56-86

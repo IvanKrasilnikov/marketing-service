@@ -1,0 +1,21 @@
++b.modal-contacts.modal#modal-contacts
+  form.ui.form
+    +e.wrapper
+      +e.names
+        +e.name Name
+        +e.name Company
+        +e.name Phone
+        +e.name Email
+        +e.name Message
+      +e.inputs
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        input(type='text')
+        textarea
+    +e(type='submit').BUTTON.button.btn.waves-effect.waves-light SEND
+
+  +e.wrapper
+    +e.col_one
+      +e.city Poland
+      +e(href='tel:+48506265686').phone +48 (506) 26-56-86

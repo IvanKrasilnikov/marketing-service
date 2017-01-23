@@ -1,0 +1,36 @@
+.block-4 {
+  @include padding(30px null);
+  text-align: center;
+
+  &__wrapper {
+    @include container;
+    @include margin(30px null);
+  }
+
+  &__small {
+    @include span(5 of 12);
+  }
+
+  &__img-wrapper {
+    @include margin(20px null);
+  }
+
+  &__middle {
+    @include span(2 of 12);
+  }
+
+  &__middle-icon {
+    @include margin(70px null null);
+    @include size(150px);
+    fill: $c-theme-4;
+  }
+
+  &__big {
+    @include span(5 of 12 last);
+  }
+
+  &__aftertext {
+    @include font(null 1.5);
+    color: $c-base-black;
+  }
+}

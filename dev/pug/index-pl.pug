@@ -1,0 +1,51 @@
+include ../../node_modules/bemto.pug/bemto
+
+doctype
+html(lang='pl')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=1200')
+    //- meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Marketing Service
+
+    // Material Icons
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic' rel='stylesheet')
+
+    link(rel='stylesheet' href='css/vendors.css')
+    link(rel='stylesheet' href='css/main.css')
+
+  body
+
+    include ../svg/symbols.svg
+
+    include ../BLOCKS/header/header
+    include ../BLOCKS/block-1/block-1-pl
+    include ../BLOCKS/block-1-1/block-1-1-pl
+    include ../BLOCKS/block-2/block-2-pl
+    include ../BLOCKS/block-3/block-3-pl
+    include ../BLOCKS/block-4/block-4-pl
+    include ../BLOCKS/block-5/block-5-pl
+    include ../BLOCKS/block-6/block-6-pl
+    include ../BLOCKS/block-7/block-7-pl
+    include ../BLOCKS/block-8/block-8-pl
+    include ../BLOCKS/block-9/block-9-pl
+    include ../BLOCKS/block-10/block-10-pl
+    include ../BLOCKS/block-11/block-11-pl
+    include ../BLOCKS/block-12/block-12-pl
+    include ../BLOCKS/block-13/block-13-pl
+    include ../BLOCKS/block-14/block-14-pl
+    include ../BLOCKS/footer/footer-pl
+
+    include ../BLOCKS/to-home/to-home
+
+    include ../BLOCKS/side-nav/side-nav-pl
+
+    include ../BLOCKS/modal-contacts/modal-contacts-pl
+
+    script(src='js/vendors.js')
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js")
+    script(src='js/vendors/not-concat/form.min.js')
+    script(src='js/main.js')

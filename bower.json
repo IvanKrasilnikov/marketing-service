@@ -1,0 +1,8 @@
+{
+  "name": "bower-config",
+  "version": "0.1.0",
+  "dependencies": {
+    "breakpoint-sass": "compass-breakpoint#^2.7.0",
+    "susy": "^2.2.12"
+  }
+}
